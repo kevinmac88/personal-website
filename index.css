@@ -12,3 +12,29 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+/* All links site-wide */
+a {
+  color: #fff; /* white */
+  text-decoration: none; /* optional: remove underline */
+}
+
+a:hover,
+a:focus {
+  color: #fff; /* keep white on hover/focus */
+  text-decoration: underline; /* optional: show underline on hover */
+}
+
+a:active,
+a:visited {
+  color: #fff; /* keep white when active/visited */
+}
+
+body {
+  background-color: rgb(55, 55, 117);
+}
+main > img {
+  width: 300px;
+  float: right;
+  margin: 1rem;
+}

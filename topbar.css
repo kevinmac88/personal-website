@@ -1,23 +1,45 @@
+html,
+body {
+  margin: 0;
+  color: white;
+}
+
 .topbar {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: rgb(134, 190, 255);
-  list-style: none;
+  justify-content: space-between;
+  background: rgb(0, 37, 80);
+  margin: 0; /* no outer gap */
+  border: 0; /* ensure no border */
+  padding: 0.75rem 1rem; /* inner spacing only */
+  box-shadow: 0 0 12px -2px black;
 }
 
+.topbar .logo h1 {
+  margin: 0;
+}
 .topbar ul {
-  display: flex; /* lay items out horizontally */
-  gap: 1rem; /* space between links */
-  list-style: none; /* remove bullets */
-  margin: 1rem;
-  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0; /* no outer gap */
   padding: 0;
 }
 
-h1 {
-  margin-left: 1rem;
-  color: white;
-  padding: 0;
+h2 {
+  margin: 0; /* no outer gap */
+  border: 0; /* ensure no border */
+  padding: 3rem 2rem; /* inner spacing only */
+  font-size: 2.5em;
+}
+
+H3 {
+  font-family: "Pacifico";
+  margin: 0; /* no outer gap */
+  border: 0; /* ensure no border */
+  padding: 3rem 2rem; /* inner spacing only */
+  font-size: 2em;
+  h1 {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
 }
