@@ -1,23 +1,88 @@
+/* Page base */
+html,
+body {
+  margin: 0;
+}
+body {
+  background: #373775;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Top bar (full-width) */
 .topbar {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  background-color: rgb(134, 190, 255);
-  list-style: none;
+  justify-content: space-between;
+  background: rgb(0, 37, 80);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.7);
 }
-
+.topbar h1 {
+  margin: 0;
+}
 .topbar ul {
-  display: flex; /* lay items out horizontally */
-  gap: 1rem; /* space between links */
-  list-style: none; /* remove bullets */
-  margin: 1rem;
-  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
+.topbar a {
+  color: inherit;
+  text-decoration: none;
+}
 
-h1 {
-  margin-left: 1rem;
-  color: white;
-  padding: 0;
+/* The colored main band that “connects” to header/footer */
+.main-panel {
+  /* make sure there’s space for the shadow to show */
+  margin-inline: var(--gutter); /* the gutters */
+  background: #0b3a78;
+  border-radius: 0; /* straight edges */
+  /* shadow “halo” onto gutters */
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.35);
+  position: relative; /* for safety with stacking */
+  min-height: 75vh;
+}
+
+/* Foreground content card */
+/* .content-card { */
+  max-width: 960px;
+  margin: 0 auto; /* center the card */
+  background: #ffffff; /* card on top of colored band */
+  color: #111; /* readable text on white */
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* Image inside the card */
+.content-card img {
+  width: 300px;
+  height: auto;
+  float: right;
+  margin: 0 0 1rem 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Footer (full-width) that touches the main panel */
+.site-footer {
+  background: rgb(0, 37, 80);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin: 0; /* no gap above */
+}
+
+/* Optional wider gutters on larger screens */
+@media (min-width: 900px) {
+  .main-panel {
+    margin: 0 4rem;
+  }
+}
+
+h3 {
+  color: #000000;
+  font-family: "Pacifico", sans-serif;
 }
