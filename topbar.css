@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 :root {
-  --gutter: clamp(1rem, 4vw, 3rem); /* grows with viewport */
+  --gutter: clamp(1rem, 10rem, 10rem); /* grows with viewport */
 }
 
 body {
@@ -72,7 +72,13 @@ body {
   display: block;
   object-fit: cover;
 }
-
+/* Center the text horizontally (and optionally the whole block vertically) */
+.content-card {
+  /* it's already a flex column via .main-panel > div */
+  align-items: center; /* center children horizontally */
+  justify-content: flex-start; /* center the group vertically (optional) */
+  text-align: center; /* center the text lines */
+}
 /* Foreground content card */
 .content-card {
   grid-column: 1 /2;
@@ -121,4 +127,27 @@ h3 {
   font-family: "Pacifico", sans-serif;
   font-weight: 40;
   text-shadow: 1px 1px 0 #000;
+}
+/* wide */
+.main-panel {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "text img";
+  gap: 1.5rem;
+}
+.content-card {
+  grid-area: text;
+}
+.main-panel > img {
+  grid-area: img;
+}
+
+/* narrow */
+@media (max-width: 800px) {
+  .main-panel {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+  }
 }

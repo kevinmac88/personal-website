@@ -34,3 +34,10 @@ a:visited {
 body {
   background-color: rgb(55, 55, 117);
 }
+
+/* underline the current page link */
+.topbar a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
