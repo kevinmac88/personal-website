@@ -11,6 +11,7 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 /* All links site-wide */
@@ -36,5 +37,7 @@ body {
 main > img {
   width: 300px;
   float: right;
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
+
+\
