@@ -1,0 +1,23 @@
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(134, 190, 255);
+  list-style: none;
+}
+
+.topbar ul {
+  display: flex; /* lay items out horizontally */
+  gap: 1rem; /* space between links */
+  list-style: none; /* remove bullets */
+  margin: 1rem;
+  text-decoration: none;
+  padding: 0;
+}
+
+h1 {
+  margin-left: 1rem;
+  color: white;
+  padding: 0;
+}
