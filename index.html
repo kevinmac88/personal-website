@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./topbar.css" />
     <link rel="stylesheet" href="./index.css" />
-
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
     />
     <title>Home - Kevin's Page</title>
   </head>
@@ -19,7 +24,7 @@
       <nav class="topbar">
         <div class="logo"><h1>Kevin MacDonald</h1></div>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./portfolio.html">Portfolio</a></li>
         </ul>
@@ -29,8 +34,8 @@
     <!-- Colored band behind your content -->
     <main class="main-panel">
       <!-- The foreground “card” that holds your text -->
-      <img src="./me.png" alt="Kevin" />
-      <div class="content-card">
+      <img class="hero-img" src="./me.png" alt="Kevin" />
+      <div>
         <h2>Aspiring Developer</h2>
         <p>
           Full-time student at FullStack Academy, learning the skills I need to
@@ -46,6 +51,13 @@
     <footer class="site-footer">
       <!-- add footer links later -->
       <p>© 2025 Kevin MacDonald</p>
+      <a
+        href="mailto:iamkevinmac@gmail.com"
+        class="email"
+        aria-label="Email Kevin"
+      >
+        <span class="material-symbols-outlined"> mail </span></a
+      >
     </footer>
   </body>
 </html>
