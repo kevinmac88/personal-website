@@ -14,6 +14,21 @@
   box-sizing: border-box;
 }
 
+/* Page base */
+html,
+body {
+  margin: 0;
+}
+:root {
+  --gutter: clamp(1rem, 10rem, 10rem); /* grows with viewport */
+}
+
+body {
+  background: #373775;
+  color: #fff;
+  background-color: rgb(55, 55, 117);
+}
+
 /* All links site-wide */
 a {
   color: #fff; /* white */
@@ -29,15 +44,4 @@ a:focus {
 a:active,
 a:visited {
   color: #fff; /* keep white when active/visited */
-}
-
-body {
-  background-color: rgb(55, 55, 117);
-}
-
-/* underline the current page link */
-.topbar a[aria-current="page"] {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 1px;
 }
