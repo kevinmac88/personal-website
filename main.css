@@ -1,3 +1,17 @@
+/* set a minimum page width */
+html,
+body {
+  min-width: 360px; /* pick your minimum */
+  overflow-x: auto; /* allow horizontal scroll if needed */
+}
+
+/* keep key sections from shrinking below that min */
+.topbar,
+.main-panel,
+.site-footer {
+  min-width: 360px; /* same as page min-width */
+}
+
 /* Right column image, fixed size */
 .hero-img {
   grid-column: 2; /* stays in the right column */
@@ -97,10 +111,10 @@
 }
 
 .portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* move children (h2, img) to the right */
-  text-align: right; /* aligns text itself */
+  width: 600px; /* or max-width: 600px; */
+  margin-left: auto; /* pushes it to the right side */
+  margin-right: 0;
+  text-align: right; /* optional: aligns text inside */
 }
 .portfolio img {
   max-width: 90%; /* closer to full width */
