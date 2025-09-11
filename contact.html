@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Kevin's Page</title>
+    <link rel="stylesheet" href="./topbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #373775;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        max-width: 600px;
+        margin: 5rem auto;
+        padding: 2rem;
+        background: #0b3a78;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+        background: #ff9800;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #e68900;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="topbar">
+        <div class="logo"><h1>Kevin MacDonald</h1></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Me</h1>
+      <form class="form-grid">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+
+        <button class="full-row" type="submit">Send Message</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Kevin MacDonald</p>
+      <a
+        href="mailto:iamkevinmac@gmail.com"
+        class="email"
+        aria-label="Email Kevin"
+      >
+        <span class="material-symbols-outlined"> mail </span>
+      </a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

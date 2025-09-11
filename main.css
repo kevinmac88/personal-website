@@ -1,0 +1,126 @@
+/* Right column image, fixed size */
+.hero-img {
+  grid-column: 2; /* stays in the right column */
+  width: 320px; /* fixed width */
+  height: 320px; /* fixed height (or use 'auto' to keep natural ratio) */
+  object-fit: cover; /* crop if you set a fixed height */
+  border-radius: 8px;
+  display: block;
+  justify-self: end; /* position inside the grid cell */
+  align-self: start;
+
+  /* prevent shrinking by earlier % rules */
+  max-width: none;
+  min-width: 320px;
+  min-height: 320px;
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space between heading and list */
+  color: #fff; /* ensure visibility */
+}
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hobby img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0; /* spacing below the photo */
+}
+
+#helloBtn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#helloBtn:hover {
+  background: #e68900;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem 1rem; /* row gap | column gap */
+  align-items: center;
+}
+
+/* Right-align labels to the gap */
+.form-grid label {
+  font-weight: 600;
+  justify-self: end;
+}
+
+/* Inputs/textarea fill their column */
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Make the button span both columns */
+.form-grid .full-row {
+  grid-column: 1 / -1;
+  justify-self: start; /* or center/right if you prefer */
+  padding: 0.75rem 1.25rem;
+  font-size: 1.05rem;
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.form-grid .full-row:hover {
+  background: #e68900;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* move children (h2, img) to the right */
+  text-align: right; /* aligns text itself */
+}
+.portfolio img {
+  max-width: 90%; /* closer to full width */
+  width: 500px;
+  border-radius: 8px;
+}
+.portfolio h2 {
+  margin-top: 0; /* remove default browser margin */
+  margin-bottom: 1rem; /* tighten gap above image */
+  font-size: 1.8rem; /* optional: make text bigger */
+}
+/* Mobile: stack labels above inputs */
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-grid label {
+    justify-self: start;
+  }
+  .form-grid .full-row {
+    justify-self: stretch; /* full width button on mobile */
+  }
+}
