@@ -19,6 +19,7 @@ html,
 body {
   margin: 0;
 }
+
 :root {
   --gutter: clamp(1rem, 10rem, 10rem); /* grows with viewport */
 }
