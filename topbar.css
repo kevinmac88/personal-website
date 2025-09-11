@@ -112,6 +112,8 @@ h3 {
 }
 .content-card {
   grid-area: text;
+  border-right: 2px dashed rgba(255, 255, 255, 0.3); /* vertical line */
+  padding: 2rem;
 }
 .main-panel > img {
   grid-area: img;
